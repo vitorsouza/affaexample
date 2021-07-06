@@ -1,3 +1,11 @@
+## This seems to be fixed:
+
+Thanks to [yehiaazanki](https://stackoverflow.com/users/3193819/yehiaazanki) on [Stack Overflow](https://stackoverflow.com/questions/68200189/using-fontawesome-5-15-0-with-primefaces-8-0) I found out this seems to be fixed. The only change (as you can see in one of the last commits) was to set `primefaces.FONT_AWESOME` to `true` (as opposed to what the docs say).
+
+The [FontAwesome bars icon](https://fontawesome.com/icons/bars?style=solid) is showing again and I tested with the [500px icon](https://fontawesome.com/v5.15/icons/500px?style=brands) in the menu, which is a FontAwesome 5.0.0 icon.
+
+## Original problem:
+
 This project was created from the archetype "wildfly-jakartaee-webapp-archetype" (from "org.wildfly.archetype").
 
 Then, the following dependencies were added to the POM:
