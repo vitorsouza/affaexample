@@ -1,4 +1,4 @@
-package br.ufes.informatica.affaexaple.test;
+package br.ufes.informatica.affaexample.test;
 
 import java.io.File;
 
@@ -27,14 +27,14 @@ public class SampleIT {
     @Deployment
     public static Archive<?> getEarArchive() {
         // Import the web archive that was created by Maven:
-        File f = new File("./target/affaexaple.war");
+        File f = new File("./target/affaexample.war");
         if (f.exists() == false) {
             throw new RuntimeException("File " + f.getAbsolutePath() + " does not exist.");
         }
-        WebArchive war = ShrinkWrap.create(ZipImporter.class, "affaexaple.war").importFrom(f).as(WebArchive.class);
+        WebArchive war = ShrinkWrap.create(ZipImporter.class, "affaexample.war").importFrom(f).as(WebArchive.class);
         
         // Add the package containing the test classes:
-        war.addPackage("br.ufes.informatica.affaexaple.test");
+        war.addPackage("br.ufes.informatica.affaexample.test");
 
         // Export the WAR file to examine it in case of problems:
         // war.as(ZipExporter.class).exportTo(new File("c:\\temp\\test.war"), true);
